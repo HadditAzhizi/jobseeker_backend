@@ -7,6 +7,12 @@ SELECT inventory_code, final_stock FROM  history WHERE stock_code IN (
     GROUP BY inventory_code
 ) order by date desc
 
+## Login Akses
+<pre>
+    <div class="container">
+Username : admin
+Password : admin
+
 </div></pre>
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
