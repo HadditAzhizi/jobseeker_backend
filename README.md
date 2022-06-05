@@ -6,7 +6,7 @@ SELECT inventory_code, final_stock FROM  history WHERE stock_code IN (
     FROM history
     GROUP BY inventory_code
 ) order by date desc
-
+</div></pre>
 ## Login Akses
 <pre>
     <div class="container">
