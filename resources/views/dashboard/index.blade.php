@@ -45,8 +45,8 @@
                             <td><img src="/uploads/{{ $terlaris->gambar }}" height="90"/></td>  
                             <td>{{ $terlaris->product }}</td> 
                             <td>{{ $terlaris->harga }}</td> 
-                            <td>{{ $terlaris->qty }}</td> 
-                            <td>{{ $terlaris->harga * $terlaris->qty }}</td> 
+                            <td>{{ $terlaris->qty_jual }}</td> 
+                            <td>{{ $terlaris->harga * $terlaris->qty_jual }}</td> 
                         </tr>
                      @endforeach 
                     </thead>

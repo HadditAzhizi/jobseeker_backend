@@ -24,7 +24,7 @@ class Mpenjualan extends Model
 	}
 	public function penjualan_terlaris()
 	{ 
-		$data = DB::select("SELECT product.gambar as gambar,product.nama as product, transaksi_jual_detail.harga, transaksi_jual_detail.qty, transaksi_jual.no_penjualan, transaksi_jual.tgl_jual from transaksi_jual_detail inner join transaksi_jual on transaksi_jual_detail.id_penjualan=transaksi_jual.id inner join product on product.id=transaksi_jual_detail.product_id order by qty desc limit 10"); 
+		$data = DB::select("SELECT product.gambar as gambar,product.nama as product, transaksi_jual_detail.harga, transaksi_jual_detail.qty, transaksi_jual.no_penjualan, transaksi_jual.tgl_jual,sum(qty) as qty_jual from transaksi_jual_detail inner join transaksi_jual on transaksi_jual_detail.id_penjualan=transaksi_jual.id inner join product on product.id=transaksi_jual_detail.product_id group by product.id order by qty_jual desc limit 10"); 
 		
 		return $data;
 	}
